@@ -1,5 +1,5 @@
 #!/bin/bash
-# DEPENDS python36.sh webserver.sh
+# DEPENDS python.sh webserver.sh
 
 set -e
 set -o xtrace
