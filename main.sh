@@ -31,3 +31,4 @@ cd $START
 ./rollymountain.sh
 ./safecycle.sh
 ./bunkopepi.sh
+./internode.sh
