@@ -12,16 +12,16 @@ if [ ! $(id -u) = 0 ]; then
    exit 1
 fi
 
-sudo apt-get install -y apache2
-sudo a2enmod cgi
-sudo rm -f /etc/apache2/sites-enabled/000-default.conf
-sudo cp configs/ports.conf /etc/apache2/ports.conf
-sudo systemctl restart apache2
+apt-get install -y apache2
+a2enmod cgi
+rm -f /etc/apache2/sites-enabled/000-default.conf
+cp configs/ports.conf /etc/apache2/ports.conf
+systemctl restart apache2
 
-sudo apt-get install -y nginx
-sudo systemctl restart nginx
+apt-get install -y nginx
+systemctl restart nginx
 
-sudo apt-get install -y software-properties-common
-sudo add-apt-repository -y ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install -y python-certbot-nginx
+apt-get install -y software-properties-common
+add-apt-repository -y ppa:certbot/certbot
+apt-get update
+apt-get install -y python-certbot-nginx

@@ -5,7 +5,7 @@ set -o xtrace
 
 sudo apt-get remove -y tmux
 sudo apt-get install -y automake build-essential pkg-config libevent-dev libncurses5-dev
-rm -fr /tmp/tmux
+rm -rf /tmp/tmux
 git clone https://github.com/tmux/tmux.git /tmp/tmux
 cd /tmp/tmux
 ./autogen.sh

@@ -1,5 +1,5 @@
 #!/bin/bash
-# DEPENDS python.sh webserver.sh
+# DEPENDS python.sh webserver.sh mysql.sh
 
 set -e
 set -o xtrace

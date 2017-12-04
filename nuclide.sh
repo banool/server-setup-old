@@ -22,6 +22,7 @@ if [ ! -d "watchman" ] || [ "$1" == "-f" ]; then
     ./configure
     make -j2
     sudo make install
+    sudo rm -rf watchman
 fi
 
 # Installing node and nuclide.
