@@ -32,3 +32,4 @@ cd $START
 ./safecycle.sh
 ./bunkopepi.sh
 ./internode.sh
+./back-server-splash.sh
