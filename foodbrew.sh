@@ -30,7 +30,7 @@ sudo rm -rf "$TARGET"
 sudo mkdir -p "$TARGET"
 sudo chown daniel:www-data "$TARGET"
 cd "$TARGET"
-git clone https://github.com/banool/foodbrew.git .
+git clone git@github.com:banool/foodbrew.git .
 
 chmod +x scripts/*.py
 
