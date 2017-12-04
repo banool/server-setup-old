@@ -8,6 +8,12 @@ Any of the scripts can be run individually, with dependencies (as in other
 scripts) indicated at the top of the file. All of them can be run in an
 appropriate order by using `main.sh`.
 
+### Before using
+Make sure to change the values in `variables.sh` appropriately.
+
+### After using
+1. Add certificate renewal to the root crontab: `0 0 1 * * certbot renew`.
+
 ## Note
 These scripts work a bit weirdly with sudo. You shouldn't run the
 scripts with sudo as it might make the permissions all weird, but if you don't
