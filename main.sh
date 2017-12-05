@@ -33,3 +33,4 @@ cd $START
 ./bunkopepi.sh
 ./internode.sh
 ./back-server-splash.sh
+./gomogo.sh

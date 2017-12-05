@@ -1,0 +1,19 @@
+server {
+        listen 80;
+        server_name gomogo.dport.me;
+
+        location / {
+            proxy_pass http://localhost:5000;
+        }
+
+        location /handler {
+            proxy_pass http://localhost:5001;
+        }
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        location ~ /\.ht {
+                deny all;
+        }
+}
