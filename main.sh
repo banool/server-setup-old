@@ -34,3 +34,8 @@ cd $START
 ./internode.sh
 ./back-server-splash.sh
 ./gomogo.sh
+
+# List the sites that have been enabled:
+cd "$START"
+echo "Enabled sites:"
+sudo ./util/get_sites.sh
