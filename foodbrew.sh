@@ -12,19 +12,20 @@ CONF_NAME="foodbrew"
 TARGET="/var/www/foodbrew"
 DBNAME="fft"
 DBUSER="daniel"
-DBPASS="pass1234"
+DBPASS="$MYSQLROOTPASSWORD"
 
 # Set up MySQL. We're still in Python 2 land, so this is how we do it.
 sudo apt-get install -y python-mysqldb
 # These are the values from scripts/handler.py.
-sudo mysql -uroot -e "DROP DATABASE IF EXISTS $DBNAME;"
-sudo mysql -uroot -e "CREATE DATABASE $DBNAME;"
-sudo mysql -uroot fft < configs/foodbrew.sql
-sudo mysql -uroot -e "GRANT USAGE ON *.* TO '$DBUSER'@'localhost';"
-sudo mysql -uroot -e "DROP USER '$DBUSER'@'localhost';"
-sudo mysql -uroot -e "CREATE USER '$DBUSER'@'localhost' IDENTIFIED BY '$DBPASS';"
-sudo mysql -uroot -e "GRANT ALL PRIVILEGES ON $DBNAME.* TO '$DBUSER'@'localhost';"
-sudo mysql -uroot -e "FLUSH PRIVILEGES;"
+sudo mysql -uroot -p"$DBPASS" -e "DROP DATABASE IF EXISTS $DBNAME;"
+sudo mysql -uroot -p"$DBPASS" -e "CREATE DATABASE $DBNAME;"
+sudo mysql -uroot -p"$DBPASS" fft < configs/foodbrew.sql
+sudo mysql -uroot -p"$DBPASS" -e "CREATE USER IF NOT EXISTS '$DBUSER'@'localhost' IDENTIFIED BY '$DBPASS';"
+sudo mysql -uroot -p"$DBPASS" -e "GRANT USAGE ON *.* TO '$DBUSER'@'localhost';"
+sudo mysql -uroot -p"$DBPASS" -e "DROP USER '$DBUSER'@'localhost';"
+sudo mysql -uroot -p"$DBPASS" -e "CREATE USER '$DBUSER'@'localhost' IDENTIFIED BY '$DBPASS';"
+sudo mysql -uroot -p"$DBPASS" -e "GRANT ALL PRIVILEGES ON $DBNAME.* TO '$DBUSER'@'localhost';"
+sudo mysql -uroot -p"$DBPASS" -e "FLUSH PRIVILEGES;"
 
 sudo rm -rf "$TARGET"
 sudo mkdir -p "$TARGET"
