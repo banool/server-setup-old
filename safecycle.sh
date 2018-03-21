@@ -18,7 +18,7 @@ if [ ! "$1" == "--no-install" ]; then
     sudo chown daniel:www-data "$TARGET"
     cd "$TARGET"
     git clone https://github.com/banool/safecycle.git .
-    git checkout localML
+    # git checkout localML  # We use master now.
 
     sudo apt-get install -y libblas-dev liblapack-dev libatlas-base-dev gfortran
 
@@ -34,13 +34,13 @@ if [ ! "$1" == "--no-install" ]; then
     cd "$START"
 fi
 
+sudo cp configs/safecycle.service /etc/systemd/system/
+sudo systemctl enable safecycle
+sudo systemctl start safecycle
+
 sudo cp configs/safecycle /etc/nginx/sites-available/
 sudo rm -f /etc/nginx/sites-enabled/safecycle
 sudo ln -s /etc/nginx/sites-available/safecycle /etc/nginx/sites-enabled/
-
-sudo cp configs/safecycle.conf /etc/apache2/sites-available/
-sudo rm -f /etc/apache2/sites-enabled/safecycle.conf
-sudo ln -s /etc/apache2/sites-available/safecycle.conf /etc/apache2/sites-enabled/
 
 sudo systemctl restart nginx
 sudo systemctl restart apache2
