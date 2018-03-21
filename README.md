@@ -9,7 +9,8 @@ scripts) indicated at the top of the file. All of them can be run in an
 appropriate order by using `main.sh`.
 
 ### Before using
-Make sure to change the values in `variables.sh` appropriately.
+- Make sure to change the values in `variables.sh` appropriately.
+- Make sure that the domain you specify in `variables.sh` points to the server.
 
 ### After using
 1. Add certificate renewal to the root crontab: `0 0 1 * * certbot renew`.

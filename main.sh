@@ -8,7 +8,7 @@ source variables.sh
 START="$PWD"
 
 # Interactive and necessary early stuff.
-./github.sh
+# ./github.sh  # Most likely you already did this to get server-setup.
 ./mosh.sh  # You could relogin with mosh after this.
 
 # Non-interactive stuff.
@@ -20,12 +20,12 @@ cd $START
 sudo ./webserver.sh
 cd $START
 ./mysql.sh
-./nuclide.sh
 cd $START
+# ./nuclide.sh
 
 # Various websites and applications, also non-interactive.
 ./foodbrew.sh
-./rugby.sh
+# ./rugby.sh
 ./dport.sh
 ./mastermind.sh
 ./rollymountain.sh
