@@ -1,6 +1,6 @@
-# Stop on errors.
+# DEPENDS node.sh
+
 set -e
-# Print each command before running it.
 set -o xtrace
 
 # Assure that we're not running as root.
@@ -25,10 +25,6 @@ if [ ! -d "watchman" ] || [ "$1" == "-f" ]; then
     sudo rm -rf watchman
 fi
 
-# Installing node and nuclide.
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
-set +e  # Yeah this actually unsets it would you believe.
-sudo ln -s /usr/bin/nodejs /usr/bin/node
+# Installing nuclide.
 set -e
 sudo npm install -g nuclide
