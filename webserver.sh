@@ -12,8 +12,9 @@ if [ ! $(id -u) = 0 ]; then
    exit 1
 fi
 
-apt-get install -y apache2
+apt-get install -y apache2 libapache2-mod-wsgi
 a2enmod cgi
+a2enmod wsgi
 rm -f /etc/apache2/sites-enabled/000-default.conf
 cp configs/ports.conf /etc/apache2/ports.conf
 systemctl restart apache2
