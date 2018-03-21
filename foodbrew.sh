@@ -49,3 +49,5 @@ sudo systemctl restart nginx
 sudo systemctl restart apache2
 
 sudo certbot --nginx -n -m danielporteous1@gmail.com --agree-tos --redirect --domains "foodbrew.$DOMAIN"
+
+echo "Make sure that you update the MySQL password in handler.py"

@@ -1,5 +1,5 @@
 #!/bin/bash
-# DEPENDS webserver.sh nuclide.sh
+# DEPENDS webserver.sh node.sh
 
 set -e
 set -o xtrace
@@ -43,7 +43,7 @@ cd client
 git checkout feature/pages
 
 npm install
-# sudo npm install -g pm2
+sudo npm install -g pm2
 pm2 start index.js
 eval "$(pm2 startup systemd | tail -n 1)"
 
