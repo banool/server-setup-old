@@ -1,3 +1,5 @@
 DOMAIN="dport.me"
-# Change this obviously.
+
+# Change these obviously.
 MYSQLROOTPASSWORD="pass1234"
+PSQLPASSWORD="pass1234"
