@@ -1,5 +1,12 @@
 #!/bin/bash
 
+read -p "Have you changed the values in variables.sh? " -r
+if [[ ! $REPLY =~ ^[Yy]$ ]];
+then
+    echo "Okay, go do that."
+    exit
+fi
+
 set -e
 set -o xtrace
 
