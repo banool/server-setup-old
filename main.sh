@@ -43,6 +43,7 @@ cd $START
 ./internode.sh
 ./back-server-splash.sh
 ./gomogo.sh
+./diary.sh
 
 # List the sites that have been enabled:
 cd "$START"

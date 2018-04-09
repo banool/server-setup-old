@@ -14,7 +14,7 @@ CONF_NAME="diary-django"
 DB_NAME="diarydjango"
 DB_USER="diaryuser"
 
-sudo apt-get install libpq-dev postgresql postgresql-contrib
+sudo apt-get install -y libpq-dev postgresql postgresql-contrib
 
 sudo -H pip3.6 install markdown  # Globals are bad but env stuff is hard.
 
