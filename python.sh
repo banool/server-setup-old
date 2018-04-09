@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install python-pip python-virtualenv
+sudo apt-get install -y python-pip python-virtualenv
 pip install --upgrade pip
 
 sudo add-apt-repository -y ppa:jonathonf/python-3.6

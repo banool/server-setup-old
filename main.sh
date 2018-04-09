@@ -28,6 +28,8 @@ sudo ./webserver.sh
 cd $START
 ./mysql.sh
 cd $START
+./node.sh
+cd $START
 # ./nuclide.sh
 
 # Various websites and applications, also non-interactive.
