@@ -44,6 +44,7 @@ cd $START
 ./back-server-splash.sh
 ./gomogo.sh
 ./diary.sh
+# ./taxdefence.sh
 
 # List the sites that have been enabled:
 cd "$START"
