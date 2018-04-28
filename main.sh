@@ -50,3 +50,6 @@ cd $START
 cd "$START"
 echo "Enabled sites:"
 sudo ./util/get_sites.sh
+
+# Copy in the default catch all apache page.
+sudo cp index.html /var/www/html
