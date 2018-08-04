@@ -1,0 +1,7 @@
+SHELL=/bin/bash
+PATH='/home/daniel/net_worth/myvenv/bin:/home/daniel/bin:/home/daniel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+# m h  dom mon dow   command
+*/10 * * * * cd /home/daniel/dyndns && python3 namecheap-dyndns-all.py && dt=$(date '+%d/%m/%Y %H:%M:%S'); echo "$dt" > last_update.txt
+* * * * * cd /home/daniel/diary && git pull
+# * * * * * cd /home/daniel/recreation-gov-campsite-checker && source myvenv/bin/activate && python camping.py --start-date 2018-07-20 --end-date 2018-07-23 70926 70927 70925 70927 | python notifier.py @banool1 # && dt=$(date '+%d/%m/%Y %H:%M:%S'); echo "$dt" > last_attempt.txt
+*/30 * * * * cd /home/daniel/net_worth && source myvenv/bin/activate && python run.py > /home/daniel/diary/entries/net_worth.md && deactivate

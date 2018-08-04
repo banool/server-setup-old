@@ -1,5 +1,5 @@
 DOMAIN="dport.me"
 
 # Change these obviously.
-MYSQLROOTPASSWORD="pass1234"
+MYSQLROOTPASSWORD="pass1234sdagasg%%d"
 PSQLPASSWORD="pass1234"

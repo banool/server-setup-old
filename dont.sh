@@ -17,9 +17,6 @@ sudo chown daniel:www-data "$TARGET"
 cd "$TARGET"
 git clone git@github.com:banool/dont-site.git .
 
-cd scripts
-./get_latest_resume.sh
-
 cd "$START"
 
 sudo cp "configs/$CONF_NAME" /etc/nginx/sites-available/
