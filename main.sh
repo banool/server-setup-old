@@ -45,7 +45,10 @@ cd $START
 ./gomogo.sh
 ./diary.sh
 ./dont.sh
-# ./taxdefence.sh
+./taxdefence.sh
+cd $START
+./codenames.sh
+cd $START
 
 # List the sites that have been enabled:
 cd "$START"
