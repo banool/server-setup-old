@@ -24,3 +24,7 @@ easier. On my fresh Ubuntu 16.04 instance I was able to run the scripts as my
 own user (`daniel`) but have all the internal `sudo` commands run without
 prompting me for the password, it was quite strange. The permissions in the
 scripts might need a rework in the future.
+
+## Other useful stuff
+See the `/sys/` related answer [at this link](https://askubuntu.com/questions/149054)
+to decrease the brightness / turn off the screen.

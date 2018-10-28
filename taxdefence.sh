@@ -15,7 +15,7 @@ sudo rm -rf "$TARGET"
 sudo mkdir -p "$TARGET"
 sudo chown daniel:www-data "$TARGET"
 cd "$TARGET"
-git clone git@github.com:banool/taxdefence.git .
+git clone git@gitlab.com:banool/taxdefence.git .
 
 cd "$START"
 

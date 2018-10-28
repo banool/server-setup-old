@@ -12,6 +12,7 @@ GOLOCATION="/home/daniel/.go"
 CONF_NAME="codenames"
 
 cd /home/daniel
+mkdir -p $GOLOCATION
 
 # Install go
 rm -rf go1.10.3.linux-amd64.tar.gz

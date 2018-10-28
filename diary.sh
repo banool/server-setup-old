@@ -21,7 +21,7 @@ sudo -H pip3.6 install markdown  # Globals are bad but env stuff is hard.
 rm -rf "$ORIG_DIARY"
 mkdir "$ORIG_DIARY"
 cd "$ORIG_DIARY"
-git clone git@github.com:banool/diary.git .
+git clone git@gitlab.com:banool/diary.git .
 
 sudo rm -rf "$TARGET"
 sudo mkdir -p "$TARGET"
@@ -42,7 +42,7 @@ echo "export DB_NAME='$DB_NAME'" >> myvenv/bin/activate
 echo "export DB_USER='$DB_USER'" >> myvenv/bin/activate
 echo "export DB_PASS='$PSQLPASSWORD'" >> myvenv/bin/activate
 
-read -s -p "Go generate and enter a Django secret key: " djangosecretkey
+read -s -p "Go generate a Django secret key, or use some random alphabetical characters: " djangosecretkey
 echo "export SECRET_KEY='$djangosecretkey'" >> myvenv/bin/activate
 
 LOG_DIR="/var/log/diary-django"

@@ -15,7 +15,7 @@ sudo rm -rf "$TARGET"
 sudo mkdir -p "$TARGET"
 sudo chown daniel:www-data "$TARGET"
 cd "$TARGET"
-git clone git@github.com:banool/rugby-voting.git .
+git clone git@gitlab.com:banool/rugby-voting.git .
 
 cd "$START"
 

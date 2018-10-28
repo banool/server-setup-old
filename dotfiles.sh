@@ -3,7 +3,7 @@
 # Install dotfiles.
 cd ~
 git init
-git remote add origin git@github.com:banool/dotfiles.git
+git remote add origin git@gitlab.com:banool/dotfiles.git
 git pull origin master
 
 # Remove unneeded dotfiles for an Ubuntu server.
