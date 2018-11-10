@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn daemon for net-worth
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+User=daniel
+Group=www-data
+WorkingDirectory=/var/www/net-worth
+# https://stackoverflow.com/questions/23733059/the-secret-key-setting-must-not-be-empty
+# ExecStart is added by diary.sh.
+

@@ -31,6 +31,8 @@ cd $START
 ./node.sh
 cd $START
 # ./nuclide.sh
+cd $START
+./chromedriver.sh
 
 # Various websites and applications, also non-interactive.
 ./foodbrew.sh
@@ -48,6 +50,8 @@ cd $START
 ./taxdefence.sh
 cd $START
 ./codenames.sh
+cd $START
+./networth.sh
 cd $START
 
 # List the sites that have been enabled:
